@@ -1,0 +1,23 @@
+{
+  "name": "many",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "docs"
+  ],
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit -p .",
+    "balances": "bun packages/core/src/balances.ts",
+    "docs": "bun run --cwd docs start",
+    "docs:build": "bun run --cwd docs build"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  },
+  "overrides": {
+    "webpack": "5.101.3"
+  }
+}
